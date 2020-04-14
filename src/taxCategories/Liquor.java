@@ -1,8 +1,13 @@
-class Tobacco implements Visitable {
+package taxCategories;
+
+import visitorInterface.Visitable;
+import visitorInterface.Visitor;
+
+public class Liquor implements Visitable {
 
     private double price;
 
-    Tobacco(double item) {
+    public Liquor(double item) {
         price = item;
     }
 

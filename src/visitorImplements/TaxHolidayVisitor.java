@@ -1,8 +1,16 @@
+package visitorImplements;
+
 import java.text.DecimalFormat;
+
+import taxCategories.Guns;
+import taxCategories.Liquor;
+import taxCategories.Necessity;
+import taxCategories.Tobacco;
+import visitorInterface.Visitor;
 
 // Concrete Visitor Class
 
-class TaxHolidayVisitor implements Visitor {
+public class TaxHolidayVisitor implements Visitor {
 
     // This formats the item prices to 2 decimal places
 
@@ -37,6 +45,12 @@ class TaxHolidayVisitor implements Visitor {
     public double visit(Necessity necessityItem) {
         System.out.println("Necessity Item: Price with Tax");
         return Double.parseDouble(df.format(necessityItem.getPrice()));
+    }
+
+    @Override
+    public double visit(Guns gunItem) {
+        System.out.println("Gun Item: Price with Tax");
+        return Double.parseDouble(df.format(gunItem.getPrice()));
     }
 
 }

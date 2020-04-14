@@ -1,8 +1,13 @@
-class Necessity implements Visitable {
+package taxCategories;
+
+import visitorInterface.Visitable;
+import visitorInterface.Visitor;
+
+public class Necessity implements Visitable {
 
     private double price;
 
-    Necessity(double item) {
+    public Necessity(double item) {
         price = item;
     }
 

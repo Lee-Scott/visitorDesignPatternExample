@@ -1,7 +1,12 @@
-// The visitor pattern is used when you have to perform
+package visitorInterface;// The visitor pattern is used when you have to perform
 // the same action on many objects of different types
 
-interface Visitor {
+import taxCategories.Guns;
+import taxCategories.Liquor;
+import taxCategories.Necessity;
+import taxCategories.Tobacco;
+
+public interface Visitor {
 
     // Created to automatically use the right
     // code based on the Object sent
@@ -12,5 +17,7 @@ interface Visitor {
     public double visit(Tobacco tobaccoItem);
 
     public double visit(Necessity necessityItem);
+
+    public double visit(Guns gunItem);
 
 }

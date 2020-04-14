@@ -1,3 +1,12 @@
+import taxCategories.Guns;
+import taxCategories.Liquor;
+import taxCategories.Necessity;
+import taxCategories.Tobacco;
+import visitorImplements.TaxHolidayVisitor;
+import visitorImplements.TaxVisitor;
+
+
+
 public class VisitorTest {
     public static void main(String[] args) {
 
@@ -7,16 +16,20 @@ public class VisitorTest {
         Necessity milk = new Necessity(3.47);
         Liquor vodka = new Liquor(11.99);
         Tobacco cigars = new Tobacco(19.99);
+        Guns ak47 = new Guns(299.99);
+
 
         System.out.println(milk.accept(taxCalc) + "\n");
         System.out.println(vodka.accept(taxCalc) + "\n");
         System.out.println(cigars.accept(taxCalc) + "\n");
+        System.out.println(ak47.accept(taxCalc) + "\n");
 
         System.out.println("TAX HOLIDAY PRICES\n");
 
         System.out.println(milk.accept(taxHolidayCalc) + "\n");
         System.out.println(vodka.accept(taxHolidayCalc) + "\n");
         System.out.println(cigars.accept(taxHolidayCalc) + "\n");
+        System.out.println(ak47.accept(taxHolidayCalc) + "\n");
 
     }
 }
