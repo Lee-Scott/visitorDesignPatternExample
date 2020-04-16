@@ -3,7 +3,7 @@ package taxCategories;
 import visitorInterface.Visitable;
 import visitorInterface.Visitor;
 
-public class Guns {
+public class Guns implements Visitable, Item{
 
     private double price;
 
